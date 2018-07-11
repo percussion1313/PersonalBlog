@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import peopleRouter from './people';
-import userRouter from './blog'
+import blogRouter from './blogs';
+
 let router = Router();
 
 router.use('/people', peopleRouter);
-router.use('/blog', userRouter);
-
+router.use('/blogs', blogRouter);
 
 export default router;

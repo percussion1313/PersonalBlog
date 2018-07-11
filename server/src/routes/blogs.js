@@ -4,13 +4,9 @@ let router = Router();
 
 let blogs = new Table('blogs');
 
-router.get('/', (req, res) => {
-
-    blogs.getAll()
-    .then(blog => {
-        res.json(blog);
-    });
-
-});
+router.get('/', async(req, res) => {
+    let blogs = await blogs.getAll();
+    res.json(blogs);
+ });
 
 export default router;
