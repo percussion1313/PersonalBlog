@@ -4,8 +4,7 @@ class Home extends Component {
 
     render() {
         return (
-            <Bloglist />
-        )
+    <div>WELCOME TO MY NIGHTMARE</div>        )
     }
 }
 

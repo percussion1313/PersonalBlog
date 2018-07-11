@@ -9,7 +9,8 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    <Link to="/blogs">Blogs</Link>
+                    <Link to="/"><button className="btn btn-outline-dark col-md-4 shadow rounded-0 mt-2">HOME</button></Link>
+                    <Link to="/blogs"><button className="btn btn-outline-dark col-md-4 shadow rounded-0 mt-2">Blog Posts</button></Link>
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/blogs" component={BlogList} />
