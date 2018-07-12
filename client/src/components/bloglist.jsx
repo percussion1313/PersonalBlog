@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Blog from './blogtemplate'
 
+let blogDatabase = '/api/blogs'
+
 class BlogList extends Component {
     constructor(props) {
         super(props);
@@ -13,12 +15,9 @@ class BlogList extends Component {
 
     async componentDidMount() {
         try {
-            let res = await fetch('/api/blogs',
-                {
-                    method: 'GET'
-                });
-            let blogs = await res.json();
-            this.setState({ blogs })
+            let res = await fetch(`${blogDatabase}`);
+            let data = await res.json();
+            this.setState({ blogs: data })
         } catch (e) {
             console.log(e)
         }
@@ -31,7 +30,7 @@ class BlogList extends Component {
         )
         return (
             <React.Fragment>
-                <div>{blogPosts}</div>
+                {blogPosts}
             </React.Fragment>
         )
     }

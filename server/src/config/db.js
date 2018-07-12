@@ -3,7 +3,7 @@ import mysql from 'mysql';
 let pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
-    user: 'blogtest2',
+    user: 'root',
     password: 'password',
     database: 'blog'
 });

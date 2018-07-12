@@ -1,20 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+
 let Blog = ({ blogData }) => {
     return (
 
-        <div>
-            <div className="card-header bg-light m-4 col-6 d-flex mx-auto position-relative">{blogData.title}
-                <div className="card-body bg-dark text-white">{blogData.content}
-
-
-                    {/* <Link key={blogData} className="badge badge-light text-dark float-right" to={`/blogs/${blogdata.id}`}>Details</Link> */}
+        <React.Fragment>
+            <div className="card d-flex mx-auto col-md-8 mt-3 rounded-0">
+                <h5 className="card-header rounded-0">{blogData.title}</h5>
+                <div className="card-body">
+                    <p className="card-text col-md-6">{blogData.content}</p>
+                    <Link key={blogData} className="badge badge-light badge-dark text-light float-right" to={`/blogs/${blogData.id}`}>Details</Link>
                 </div>
-
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 
 export default Blog
+
