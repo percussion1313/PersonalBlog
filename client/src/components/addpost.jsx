@@ -50,7 +50,7 @@ class AddPost extends Component {
                             className="btn btn-primary m-3 d-flex mx-auto shadow"
                             name="cardSubmitButton"
                             onClick={this.addPost.bind(this)}
-                        >Chirp!</button>
+                        >Post!</button>
                     </div>
                 </form>
             </React.Fragment>
